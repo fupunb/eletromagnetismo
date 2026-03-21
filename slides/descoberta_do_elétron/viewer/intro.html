@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400&display=swap" rel="stylesheet">
+    <style>
+        html, body { height: 100%; margin: 0; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: #1C1917;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Inter', sans-serif;
+            color: #E7E5E4;
+            position: relative;
+            overflow: hidden;
+        }
+        .electric-glow {
+            position: absolute;
+            width: 360px;
+            height: 360px;
+            background: radial-gradient(circle, rgba(249, 115, 22, 0.1) 0%, rgba(28, 25, 23, 0) 70%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+        }
+        .header {
+            padding-top: 60px; /* must keep upper padding */
+            text-align: center;
+            z-index: 1;
+        }
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            color: #FDE047;
+            margin-bottom: 24px; /* reduced spacing below title */
+        }
+        .content {
+            width: 90%;
+            z-index: 1;
+            text-align: center;
+            font-size: 24px;
+            line-height: 1.5; /* slightly tighter to save height */
+            padding-bottom: 20px; /* small bottom padding */
+        }
+        .steps-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding-top: 40px; /* reduced from 80px to save vertical space */
+            position: relative;
+        }
+        .step {
+            flex: 1;
+            text-align: center;
+            position: relative;
+        }
+        .step-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            color: #14B8A6;
+            margin-bottom: 6px; /* reduced gap */
+        }
+        .step-desc {
+            font-size: 18px;
+            color: #E7E5E4;
+            opacity: 0.8;
+        }
+        .connector {
+            flex: 0.2;
+            border-top: 2px dotted #F97316;
+            margin-top: 12px; /* reduced from 20px */
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="electric-glow"></div>
+        <div class="header">
+            <h2>Transformando Fórmulas em um Mistério Científico</h2>
+        </div>
+        <div class="content">
+            <p>A eletrostática não é apenas um conjunto de equações abstratas. É uma jornada de descoberta que segue um ciclo fundamental:</p>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-title">Fenômeno</div>
+                    <div class="step-desc">Observação da natureza</div>
+                </div>
+                <div class="connector"></div>
+                <div class="step">
+                    <div class="step-title">Experimento</div>
+                    <div class="step-desc">Reprodução controlada</div>
+                </div>
+                <div class="connector"></div>
+                <div class="step">
+                    <div class="step-title">Modelo</div>
+                    <div class="step-desc">Explicação teórica</div>
+                </div>
+                <div class="connector"></div>
+                <div class="step">
+                    <div class="step-title">Equação</div>
+                    <div class="step-desc">Linguagem matemática</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

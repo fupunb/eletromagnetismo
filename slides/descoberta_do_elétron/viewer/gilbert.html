@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400&display=swap" rel="stylesheet">
+    <style>
+        html,body{height:100%;margin:0}
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: #1C1917;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Inter', sans-serif;
+            color: #E7E5E4;
+            position: relative;
+            overflow: hidden;
+        }
+        .electric-glow {
+            position: absolute;
+            width: 480px;
+            height: 480px;
+            background: radial-gradient(circle, rgba(249, 115, 22, 0.1) 0%, rgba(28, 25, 23, 0) 70%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+        }
+        .header {
+            padding-top: 60px; /* keep title top padding */
+            text-align: center;
+            z-index: 1;
+            width: 100%;
+        }
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            color: #FDE047;
+            margin-bottom: 18px;
+        }
+        .main-content {
+            display: flex;
+            width: 90%;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding-top: 30px; /* reduced from 40 */
+            z-index: 1;
+        }
+        .column {
+            flex: 1;
+            padding-top: 12px; /* reduced from 20 */
+        }
+        .left-column {
+            padding-right: 36px;
+            border-right: 1px dotted #14B8A6;
+        }
+        .right-column {
+            padding-left: 36px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .point {
+            margin-bottom: 24px; /* reduced from 30 */
+            font-size: 22px;
+            line-height: 1.6;
+        }
+        .point strong {
+            color: #14B8A6;
+        }
+        .term-box {
+            padding-top: 30px; /* reduced from 40 */
+        }
+        .term-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 56px;
+            color: #F97316;
+            margin-bottom: 8px;
+        }
+        .term-desc {
+            font-size: 24px;
+            color: #E7E5E4;
+            opacity: 0.8;
+            font-style: italic;
+        }
+        .book-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            color: #FDE047;
+            margin-top: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="electric-glow"></div>
+        <div class="header">
+            <h2>William Gilbert e o Nascimento do "Electricus"</h2>
+        </div>
+        <div class="main-content">
+            <div class="column left-column">
+                <div class="point">
+                    O médico da Rainha Elizabeth I, <strong>William Gilbert</strong>, publicou em 1600 a obra fundamental <strong>De Magnete</strong>.
+                </div>
+                <div class="point">
+                    Ele provou que muitos outros materiais, além do âmbar, podiam ser eletrizados por atrito.
+                </div>
+                <div class="point">
+                    Gilbert foi o primeiro a distinguir claramente entre o <strong>magnetismo</strong> e a <strong>eletricidade estática</strong>.
+                </div>
+            </div>
+            <div class="column right-column">
+                <div class="term-box">
+                    <div class="term-title">Electricus</div>
+                    <div class="term-desc">"Como o âmbar"</div>
+                </div>
+                <div class="book-title">O início do rigor científico</div>
+                <div class="point" style="margin-top: 18px; font-size: 18px;">
+                    A ciência da eletricidade deixava de ser uma curiosidade isolada para se tornar um campo de estudo sistemático.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

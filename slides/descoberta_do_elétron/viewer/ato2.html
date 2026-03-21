@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400&display=swap" rel="stylesheet">
+    <style>
+        html,body{height:100%;margin:0;padding:0}
+        .slide-container {
+            width: 1280px;
+            min-height: 720px; /* keep as required */
+            background: #1C1917;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Inter', sans-serif;
+            color: #E7E5E4;
+            position: relative;
+            overflow: hidden;
+        }
+        .header {
+            padding-top: 60px; /* must keep this */
+            text-align: center;
+            z-index: 1;
+        }
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            color: #FDE047;
+            margin: 0 0 10px 0; /* reduced */
+        }
+        .intro-text {
+            font-size: 24px;
+            color: #E7E5E4;
+            margin: 0 0 12px 0; /* reduced */
+            text-align: center;
+            width: 80%;
+        }
+        .combat-grid {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            width: 90%;
+            padding-top: 8px; /* reduced */
+            position: relative;
+        }
+        .charge-card {
+            flex: 1;
+            text-align: center;
+            padding-top: 4px; /* reduced */
+            position: relative;
+        }
+        .charge-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            margin: 0 0 8px 0; /* reduced */
+        }
+        .vitrea { color: #14B8A6; }
+        .resinosa { color: #F97316; }
+        .glow-bg {
+            position: absolute;
+            width: 200px; /* smaller */
+            height: 200px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            opacity: 0.2;
+        }
+        .vitrea-glow { background: radial-gradient(circle, #14B8A6 0%, transparent 70%); }
+        .resinosa-glow { background: radial-gradient(circle, #F97316 0%, transparent 70%); }
+        p { margin: 6px 0; }
+        .law-box {
+            width: 80%;
+            border-top: 1px dotted #14B8A6;
+            padding-top: 12px; /* reduced */
+            margin-top: 12px;  /* reduced */
+            text-align: center;
+        }
+        .law-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            color: #FDE047;
+            font-style: italic;
+            margin:0;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <h2>Ato 2: O Combate das Cargas (1730)</h2>
+        </div>
+        <div class="intro-text">
+            Charles du Fay descobriu que a eletricidade não era única, mas sim um duelo entre dois estados fundamentais da matéria.
+        </div>
+        <div class="combat-grid">
+            <div class="charge-card">
+                <div class="glow-bg vitrea-glow"></div>
+                <div class="charge-title vitrea">Eletricidade Vítrea</div>
+                <p>Obtida através do atrito em vidro e pedras preciosas.</p>
+            </div>
+            <div class="charge-card">
+                <div class="glow-bg resinosa-glow"></div>
+                <div class="charge-title resinosa">Eletricidade Resinosa</div>
+                <p>Obtida através do atrito em âmbar, seda e resinas.</p>
+            </div>
+        </div>
+        <div class="law-box">
+            <div class="law-text">
+                "Cargas de mesma natureza se repelem; cargas de naturezas opostas se atraem."
+            </div>
+        </div>
+    </div>
+</body>
+</html>

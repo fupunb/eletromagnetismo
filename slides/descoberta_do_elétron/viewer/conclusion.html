@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body { margin: 0; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: #1C1917;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Inter', sans-serif;
+            color: #E7E5E4;
+            position: relative;
+            overflow: hidden;
+        }
+        .final-glow {
+            position: absolute;
+            width: 560px;
+            height: 560px;
+            background: radial-gradient(circle, rgba(20, 184, 166, 0.1) 0%, rgba(28, 25, 23, 0) 70%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+        }
+        .header {
+            padding-top: 80px; /* must not be reduced */
+            text-align: center;
+            z-index: 1;
+            width: 100%;
+        }
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 56px;
+            color: #FDE047;
+            margin-bottom: 8px;
+        }
+        .main-content {
+            display: flex;
+            width: 85%;
+            justify-content: space-between;
+            padding-top: 24px;
+            z-index: 1;
+        }
+        .column {
+            flex: 1;
+            padding-top: 4px;
+            text-align: center;
+        }
+        .left-column {
+            padding-right: 24px;
+            border-right: 1px dotted #14B8A6;
+        }
+        .right-column {
+            padding-left: 24px;
+        }
+        .summary-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            color: #14B8A6;
+            margin-bottom: 6px;
+        }
+        .summary-text {
+            font-size: 22px;
+            line-height: 1.6;
+            text-align: left;
+            margin-bottom: 6px;
+        }
+        .next-step-box {
+            background: rgba(249, 115, 22, 0.05);
+            padding: 10px 12px;
+            border: 1px dotted #F97316;
+            margin-top: 8px;
+        }
+        .next-step-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            color: #F97316;
+            margin-bottom: 8px;
+        }
+        .next-step-desc {
+            font-size: 20px;
+            color: #E7E5E4;
+            opacity: 0.9;
+            padding-top: 6px;
+        }
+        .quote {
+            margin-top: 8px;
+            text-align: center;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="final-glow"></div>
+        <div class="header">
+            <h2>Conclusão: Do Mistério à Tecnologia</h2>
+        </div>
+        <div class="main-content">
+            <div class="column left-column">
+                <div class="summary-title">A Jornada da Carga</div>
+                <div class="summary-text">
+                    Da Grécia Antiga aos semicondutores: a eletrostática fundamenta fenômenos naturais e tecnologias modernas.
+                </div>
+            </div>
+            <div class="column right-column">
+                <div class="summary-title">O Próximo Passo</div>
+                <div class="next-step-box">
+                    <div class="next-step-title">Eletrodinâmica</div>
+                    <div class="next-step-desc">
+                        Explorar cargas em movimento — campos variáveis, correntes e aplicações práticas.
+                    </div>
+                </div>
+                <div class="summary-text quote">
+                    "A ciência é uma maneira de pensar."
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

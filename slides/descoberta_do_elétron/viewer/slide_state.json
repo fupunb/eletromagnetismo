@@ -1,0 +1,156 @@
+{
+  "project_info": {
+    "title": "A Grande Narrativa da Eletrostática",
+    "created": 1773790810.9808757,
+    "last_updated": 1773791288.6918674,
+    "total_slides": 12
+  },
+  "slides": [
+    {
+      "id": "title",
+      "state": "edited",
+      "pageNum": 1
+    },
+    {
+      "id": "intro",
+      "state": "edited",
+      "pageNum": 2
+    },
+    {
+      "id": "ato1",
+      "state": "edited",
+      "pageNum": 3
+    },
+    {
+      "id": "gilbert",
+      "state": "edited",
+      "pageNum": 4
+    },
+    {
+      "id": "ato2",
+      "state": "edited",
+      "pageNum": 5
+    },
+    {
+      "id": "franklin",
+      "state": "edited",
+      "pageNum": 6
+    },
+    {
+      "id": "ato3",
+      "state": "edited",
+      "pageNum": 7
+    },
+    {
+      "id": "ato4",
+      "state": "edited",
+      "pageNum": 8
+    },
+    {
+      "id": "thomson",
+      "state": "edited",
+      "pageNum": 9
+    },
+    {
+      "id": "millikan",
+      "state": "edited",
+      "pageNum": 10
+    },
+    {
+      "id": "timeline",
+      "state": "edited",
+      "pageNum": 11
+    },
+    {
+      "id": "conclusion",
+      "state": "edited",
+      "pageNum": 12
+    }
+  ],
+  "outline": [
+    {
+      "id": "title",
+      "title": "A Grande Narrativa da Eletrostática",
+      "summary": "Capa da apresentação com título principal e subtítulo sobre a jornada do âmbar ao elétron.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "intro",
+      "title": "Transformando Fórmulas em um Mistério Científico",
+      "summary": "Introdução à filosofia da aula: Fenômeno, Experimento, Modelo e Equação.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "ato1",
+      "title": "O Despertar na Grécia Antiga (600 a.C.)",
+      "summary": "As observações de Thales de Mileto sobre o âmbar e a origem do termo elétron.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "gilbert",
+      "title": "William Gilbert e o Nascimento do \"Electricus\" (1600)",
+      "summary": "A contribuição de William Gilbert e a sistematização da eletrização por atrito.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "ato2",
+      "title": "O Combate das Cargas (1730)",
+      "summary": "A descoberta de Du Fay sobre os dois tipos de eletricidade e a lei de atração/repulsão.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "franklin",
+      "title": "O \"Erro\" de Benjamin Franklin e o Fluido Elétrico (1747)",
+      "summary": "O modelo de fluido único de Franklin e a convenção histórica dos sinais positivo e negativo.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "ato3",
+      "title": "Michael Faraday e a Revolução do Campo (1830)",
+      "summary": "A introdução do conceito de campo elétrico e linhas de força por Faraday.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "ato4",
+      "title": "A Busca pelo Éter e os Raios Catódicos (Séc. XIX)",
+      "summary": "O debate sobre a natureza da eletricidade e a introdução do termo elétron por Stoney.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "thomson",
+      "title": "J.J. Thomson e a Descoberta do Elétron (1897)",
+      "summary": "O experimento dos raios catódicos que provou a existência do elétron como partícula.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "millikan",
+      "title": "Millikan e a Precisão da Carga Elementar (1909)",
+      "summary": "O experimento da gota de óleo e a quantização da carga elétrica.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "timeline",
+      "title": "Linha do Tempo: A Evolução da Eletrostática",
+      "summary": "Resumo cronológico dos principais cientistas e suas descobertas.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "conclusion",
+      "title": "Conclusão: Do Mistério à Tecnologia",
+      "summary": "Encerramento conectando a história à tecnologia moderna e próximos passos.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    }
+  ]
+}

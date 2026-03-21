@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body { margin: 0; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: #1C1917;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Inter', sans-serif;
+            color: #E7E5E4;
+            position: relative;
+            overflow: hidden;
+        }
+        .ether-glow {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(249, 115, 22, 0.05) 0%, rgba(28, 25, 23, 0) 70%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+        }
+        .header {
+            padding-top: 60px; /* keep upper padding as required */
+            text-align: center;
+            z-index: 1;
+            width: 100%;
+        }
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            color: #FDE047;
+            margin-bottom: 20px;
+        }
+        .main-content {
+            display: flex;
+            width: 90%;
+            justify-content: space-between;
+            padding-top: 24px; /* reduced from 40px */
+            z-index: 1;
+        }
+        .debate-box {
+            flex: 1;
+            text-align: center;
+            padding-top: 8px; /* reduced from 20px */
+        }
+        .debate-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            margin-bottom: 12px; /* slightly reduced */
+            color: #14B8A6;
+        }
+        .divider {
+            width: 1px;
+            border-left: 1px dotted #14B8A6;
+            margin-left: 24px;
+            margin-right: 24px;
+        }
+        .stoney-box {
+            width: 80%;
+            padding-top: 30px; /* reduced from 60px */
+            text-align: center;
+            z-index: 1;
+            border-top: 1px dotted #F97316;
+            margin-top: 12px; /* reduced from 40px */
+        }
+        .stoney-text {
+            font-size: 22px;
+            line-height: 1.6;
+        }
+        .stoney-text strong {
+            color: #F97316;
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="ether-glow"></div>
+        <div class="header">
+            <h2>Ato 4: A Busca pelo Éter e os Raios Catódicos</h2>
+        </div>
+        <div class="main-content">
+            <div class="debate-box">
+                <div class="debate-title">Ondas no Éter</div>
+                <p>Muitos cientistas acreditavam que a eletricidade era uma vibração no "éter luminífero", um meio invisível que preenchia o espaço.</p>
+            </div>
+            <div class="divider"></div>
+            <div class="debate-box">
+                <div class="debate-title">Partículas Reais</div>
+                <p>Outros defendiam que os misteriosos <strong>Raios Catódicos</strong> eram, na verdade, um fluxo de partículas carregadas.</p>
+            </div>
+        </div>
+        <div class="stoney-box">
+            <p class="stoney-text">
+                Em 1891, George Johnstone Stoney introduziu o termo:<br>
+                <strong>"Elétron"</strong><br>
+                Inicialmente apenas como uma unidade de carga, antes mesmo de sua descoberta física.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

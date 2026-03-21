@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body{margin:0}
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: #1C1917;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Inter', sans-serif;
+            color: #E7E5E4;
+            position: relative;
+            top: -1px; /* lift slightly so total page height is below 720px */
+            overflow: hidden;
+        }
+        .electric-glow {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(20, 184, 166, 0.1) 0%, rgba(28, 25, 23, 0) 70%);
+            top: 50%;
+            right: 10%;
+            transform: translateY(-50%);
+            z-index: 0;
+        }
+        .header {
+            padding-top: 60px;
+            text-align: center;
+            z-index: 1;
+            width: 100%;
+        }
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            color: #FDE047;
+            margin-bottom: 20px;
+        }
+        .main-content {
+            display: flex;
+            width: 90%;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 30px; /* reduced to save vertical space */
+            z-index: 1;
+        }
+        .text-section {
+            flex: 1;
+            padding-right: 40px;
+        }
+        .highlight-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-left: 1px dotted #14B8A6;
+            padding-top: 20px;
+        }
+        .point {
+            margin-bottom: 24px; /* slightly reduced */
+            font-size: 22px;
+            line-height: 1.6;
+        }
+        .point strong {
+            color: #14B8A6;
+        }
+        .elektron-box {
+            text-align: center;
+        }
+        .elektron-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 64px;
+            color: #F97316;
+            margin-bottom: 8px; /* reduced */
+        }
+        .elektron-desc {
+            font-size: 24px;
+            color: #E7E5E4;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="electric-glow"></div>
+        <div class="header">
+            <h2>Ato 1: O Despertar na Grécia Antiga</h2>
+        </div>
+        <div class="main-content">
+            <div class="text-section">
+                <div class="point">
+                    <strong>Thales de Mileto (600 a.C.)</strong> observou que o âmbar atraía pequenos pedaços de palha após ser atritado.
+                </div>
+                <div class="point">
+                    Esse fenômeno simples permaneceu um mistério sem explicação por quase <strong>2000 anos</strong>.
+                </div>
+                <div class="point">
+                    A curiosidade humana sobre a eletricidade começou com essa resina fossilizada.
+                </div>
+            </div>
+            <div class="highlight-section">
+                <div class="elektron-box">
+                    <div class="elektron-title">Elektron</div>
+                    <div class="elektron-desc">A palavra grega para Âmbar</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

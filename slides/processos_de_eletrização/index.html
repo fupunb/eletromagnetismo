@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Processos de Eletrização | Reveal.js</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
+  <link rel="stylesheet" href="../descoberta_do_elétron/reveal_theme.css">
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section class="deck-slide hero">
+        <div class="slide-inner">
+          <div class="eyebrow">Eletromagnetismo em Ciências</div>
+          <div class="hero-grid">
+            <div>
+              <h1>Processos de Eletrização</h1>
+              <p class="lead">Três caminhos para um corpo ganhar ou perder elétrons: atrito, contato e indução. A
+                mesma ideia central aparece em todos eles: a carga elétrica se conserva, mas pode se redistribuir.</p>
+            </div>
+            <div class="hero-panel">
+              <div class="hero-subtitle">Mapa conceitual</div>
+              <div class="metric-value">Esfregar • tocar • aproximar</div>
+              <p>Ao comparar os três processos, fica mais fácil reconhecer quando há transferência direta de elétrons,
+                quando há polarização e quando o aterramento é necessário.</p>
+            </div>
+          </div>
+          <div class="hero-footer">
+            <p class="kicker">Objetivo: conectar fenômeno cotidiano, modelo microscópico, tabela comparativa e
+              linguagem matemática.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="deck-slide">
+        <div class="slide-inner">
+          <div class="eyebrow">Ideia central</div>
+          <h2>O que significa eletrizar um corpo?</h2>
+          <p class="lead">Um corpo está eletrizado quando o número de prótons e elétrons deixa de se equilibrar. Em
+            sólidos usuais, quem se move são os elétrons; os prótons permanecem presos nos núcleos atômicos.</p>
+          <div class="grid-2">
+            <div class="panel">
+              <h3>Carga líquida</h3>
+              <p>\[
+                Q = n \cdot e
+                \]</p>
+              <p>Nessa expressão, <strong>\(n\)</strong> é o número de elétrons transferidos e
+                <strong>\(e = 1{,}6 \times 10^{-19}\,\mathrm{C}\)</strong> é a carga elementar.
+              </p>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Leitura física</div>
+              <div class="metric-value">Excesso ou falta</div>
+              <p>Se um corpo ganha elétrons, fica <strong>negativo</strong>. Se perde elétrons, fica
+                <strong>positivo</strong>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="deck-slide">
+        <div class="slide-inner">
+          <div class="eyebrow">Visão geral</div>
+          <h2>Os três processos em uma única imagem mental</h2>
+          <div class="process-row">
+            <div class="process-step fragment fade-up">
+              <span class="step-index">Atrito</span>
+              <h3>Esfregar</h3>
+              <p>Duas superfícies diferentes trocam elétrons por terem afinidades eletrônicas distintas.</p>
+            </div>
+            <div class="process-step fragment fade-up">
+              <span class="step-index">Contato</span>
+              <h3>Tocar</h3>
+              <p>Um corpo carregado encosta em outro e a carga se redistribui até atingir novo equilíbrio.</p>
+            </div>
+            <div class="process-step fragment fade-up">
+              <span class="step-index">Indução</span>
+              <h3>Aproximar</h3>
+              <p>Sem tocar, o campo elétrico reorganiza as cargas; com aterramento, o corpo pode terminar eletrizado.
+              </p>
+            </div>
+            <div class="process-step fragment fade-up">
+              <span class="step-index">Regra comum</span>
+              <h3>Conservação</h3>
+              <p>A carga total do sistema se conserva em todos os casos, mesmo quando muda de lugar.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="deck-slide">
+        <div class="slide-inner">
+          <div class="eyebrow">Processo 1</div>
+          <h2>Eletrização por Atrito</h2>
+          <div class="grid-2">
+            <div class="panel">
+              <ul class="clean">
+                <li class="fade-up">O atrito aumenta a área efetiva de contato entre materiais diferentes.</li>
+                <li class="fragment fade-up">Durante esse contato intenso, alguns elétrons passam de uma superfície
+                  para a outra.</li>
+                <li class="fragment fade-up">Ao final, os corpos ficam com <strong>cargas de mesmo módulo e sinais
+                    opostos</strong>, se o sistema estiver inicialmente neutro.</li>
+                <li class="fragment fade-up">É o processo típico de um <strong>balão esfregado no cabelo</strong> ou
+                  de uma <strong>régua plástica atritada com tecido</strong>.</li>
+              </ul>
+            </div>
+            <div class="comparison-card vitrea fragment zoom-in">
+              <div class="term-caption">Modelo microscópico</div>
+              <div class="term-word">Transferência de elétrons</div>
+              <p>O atrito não cria carga do nada. Ele apenas desloca elétrons de um material para outro.</p>
+              <p>\[
+                Q_A + Q_B = \text{constante}
+                \]</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="deck-slide">
+        <div class="slide-inner">
+          <div class="eyebrow">Atrito</div>
+          <h2>Série triboelétrica e exemplos cotidianos</h2>
+          <p class="lead">A série triboelétrica é qualitativa: ela indica quais materiais tendem a perder elétrons e
+            quais tendem a recebê-los quando atritados.</p>
+          <div class="table-shell">
+            <table class="nice-table" aria-label="Exemplos de eletrização por atrito">
+              <thead>
+                <tr>
+                  <th>Par de materiais</th>
+                  <th>Tende a ficar positivo</th>
+                  <th>Tende a ficar negativo</th>
+                  <th>Exemplo observado</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Vidro + seda</td>
+                  <td class="pos">vidro</td>
+                  <td class="neg">seda</td>
+                  <td class="rule">bastão de vidro atrai papéis leves</td>
+                </tr>
+                <tr>
+                  <td>Balão + cabelo</td>
+                  <td class="pos">cabelo</td>
+                  <td class="neg">balão</td>
+                  <td class="rule">balão gruda na parede</td>
+                </tr>
+                <tr>
+                  <td>PVC + lã</td>
+                  <td class="pos">lã</td>
+                  <td class="neg">PVC</td>
+                  <td class="rule">cano de PVC atrai filete de água</td>
+                </tr>
+                <tr>
+                  <td>Âmbar + tecido</td>
+                  <td class="pos">tecido</td>
+                  <td class="neg">âmbar</td>
+                  <td class="rule">atração de palhas e penas</td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="table-note">A posição exata pode variar com umidade, limpeza da superfície e composição do
+              material.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="deck-slide">
+        <div class="slide-inner">
+          <div class="eyebrow">Processo 2</div>
+          <h2>Eletrização por Contato</h2>
+          <div class="grid-2">
+            <div class="panel">
+              <ul class="clean">
+                <li class="fade-up">Um corpo carregado encosta em outro corpo, geralmente condutor.</li>
+                <li class="fragment fade-up">Os elétrons se deslocam até que o potencial elétrico entre os corpos se
+                  reequilibre.</li>
+                <li class="fragment fade-up">Depois da separação, ambos costumam ficar com <strong>cargas de mesmo
+                    sinal</strong>.</li>
+                <li class="fragment fade-up">Se os condutores forem idênticos, a carga tende a se dividir igualmente.
+                </li>
+              </ul>
+            </div>
+            <div class="metric-card fragment zoom-in">
+              <div class="metric-label">Caso simples</div>
+              <div class="metric-value">Esferas idênticas</div>
+              <p>Se uma esfera tem carga inicial \(Q\) e a outra está neutra, após o contato ideal cada uma pode ficar
+                com:</p>
+              <p>\[
+                Q_f = \frac{Q}{2}
+                \]</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="deck-slide">
+        <div class="slide-inner">
+          <div class="eyebrow">Contato</div>
+          <h2>Exemplo resolvido: duas esferas condutoras idênticas</h2>
+          <div class="grid-2">
+            <div class="panel">
+              <h3>Situação</h3>
+              <p>Esfera A com \(Q_A = +8\,\mu\mathrm{C}\) toca a esfera B inicialmente neutra.</p>
+              <p>Como são idênticas, a carga total se divide de modo simétrico:</p>
+              <p>\[
+                Q_{\text{total}} = +8\,\mu\mathrm{C}
+                \qquad
+                Q'_A = Q'_B = +4\,\mu\mathrm{C}
+                \]</p>
+            </div>
+            <div class="quote-panel fragment fade-up">
+              <p class="quote-text">Contato não significa “copiar” a carga inicial. Significa redistribuir a carga
+                total disponível.</p>
+              <p>Se uma esfera estivesse negativa e a outra positiva, o cálculo precisaria considerar a soma algébrica
+                das cargas antes da divisão.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="deck-slide">
+        <div class="slide-inner">
+          <div class="eyebrow">Processo 3</div>
+          <h2>Eletrização por Indução</h2>
+          <p class="lead">Na indução, o corpo eletrizado não encosta no outro. A simples aproximação já produz
+            separação interna de cargas, fenômeno chamado polarização.</p>
+          <div class="process-row">
+            <div class="process-step fragment fade-up">
+              <span class="step-index">1</span>
+              <h3>Aproximar</h3>
+              <p>Um indutor carregado é trazido para perto de um condutor neutro.</p>
+            </div>
+            <div class="process-step fragment fade-up">
+              <span class="step-index">2</span>
+              <h3>Polarizar</h3>
+              <p>As cargas no condutor se reorganizam: um lado fica mais negativo e o outro mais positivo.</p>
+            </div>
+            <div class="process-step fragment fade-up">
+              <span class="step-index">3</span>
+              <h3>Aterrar</h3>
+              <p>Elétrons entram ou saem do condutor, dependendo do sinal do indutor.</p>
+            </div>
+            <div class="process-step fragment fade-up">
+              <span class="step-index">4</span>
+              <h3>Separar</h3>
+              <p>Retira-se o aterramento e depois o indutor; o corpo fica eletrizado com sinal oposto ao do indutor.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="deck-slide">
+        <div class="slide-inner">
+          <div class="eyebrow">Indução</div>
+          <h2>O papel do campo elétrico e do aterramento</h2>
+          <div class="grid-2">
+            <div class="comparison-card resinosa fragment fade-up">
+              <div class="term-caption">Sem aterramento</div>
+              <div class="term-word">Apenas polarização</div>
+              <p>O corpo continua neutro como um todo. Há separação interna de cargas, mas não aparece carga líquida
+                final.</p>
+            </div>
+            <div class="comparison-card vitrea fragment fade-up">
+              <div class="term-caption">Com aterramento</div>
+              <div class="term-word">Carga líquida final</div>
+              <p>O solo atua como reservatório gigantesco de elétrons. Isso permite que o corpo ganhe ou perca
+                elétrons e termine eletrizado.</p>
+            </div>
+          </div>
+          <div class="law-strip fragment zoom-in">
+            \[
+            \vec{E} = \frac{\vec{F}}{q}
+            \]
+          </div>
+        </div>
+      </section>
+
+      <section class="deck-slide">
+        <div class="slide-inner">
+          <div class="eyebrow">Comparação</div>
+          <h2>Como distinguir os três processos</h2>
+          <div class="table-shell">
+            <table class="nice-table" aria-label="Comparação entre processos de eletrização">
+              <thead>
+                <tr>
+                  <th>Processo</th>
+                  <th>Há toque?</th>
+                  <th>Como surge a carga final?</th>
+                  <th>Sinal típico do corpo eletrizado</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Atrito</td>
+                  <td>Sim, com esfregamento</td>
+                  <td>Transferência de elétrons entre materiais diferentes</td>
+                  <td class="rule">corpos com sinais opostos</td>
+                </tr>
+                <tr>
+                  <td>Contato</td>
+                  <td>Sim, com encosto direto</td>
+                  <td>Redistribuição da carga total do sistema</td>
+                  <td class="rule">mesmo sinal do corpo inicialmente carregado</td>
+                </tr>
+                <tr>
+                  <td>Indução</td>
+                  <td>Não</td>
+                  <td>Polarização e troca com a Terra</td>
+                  <td class="rule">oposto ao sinal do indutor</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="deck-slide">
+        <div class="slide-inner">
+          <div class="eyebrow">Aplicações</div>
+          <h2>Onde esses processos aparecem no cotidiano?</h2>
+          <div class="grid-3">
+            <div class="panel fragment fade-up">
+              <h3>Atrito</h3>
+              <p>Roupas saindo da secadora, choque ao tirar blusa de lã, poeira aderindo em telas e plásticos.</p>
+            </div>
+            <div class="panel fragment fade-up">
+              <h3>Contato</h3>
+              <p>Carga sendo transferida entre condutores, descargas ao tocar maçanetas e processos de equalização de
+                potencial.</p>
+            </div>
+            <div class="panel fragment fade-up">
+              <h3>Indução</h3>
+              <p>Funcionamento do eletroscópio, blindagem eletrostática, para-raios e sensores capacitivos.</p>
+            </div>
+          </div>
+          <div class="quote-panel fragment fade-up">
+            <p class="quote-text">O mesmo conteúdo que explica um balão grudando na parede também ajuda a entender
+              equipamentos eletrônicos, segurança industrial e proteção contra descargas.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="deck-slide">
+        <div class="slide-inner">
+          <div class="eyebrow">Exercício</div>
+          <h2>Raciocínio rápido para sala de aula</h2>
+          <div class="grid-2">
+            <div class="panel">
+              <h3>Pergunta</h3>
+              <p>Um bastão negativamente carregado é aproximado de uma esfera metálica neutra sobre suporte isolante.
+                A esfera é aterrada e, em seguida, o aterramento é retirado antes do bastão se afastar.</p>
+              <p>Com que sinal a esfera fica ao final?</p>
+            </div>
+            <div class="metric-card fragment zoom-in">
+              <div class="metric-label">Resposta</div>
+              <div class="metric-value">Positiva</div>
+              <p>O bastão negativo repele elétrons da esfera para a Terra. Ao retirar o aterramento, a esfera fica com
+                falta de elétrons, portanto com carga positiva.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="deck-slide">
+        <div class="slide-inner">
+          <div class="eyebrow">Síntese final</div>
+          <h2>Uma regra de identificação para não confundir</h2>
+          <div class="grid-3">
+            <div class="comparison-card vitrea fragment fade-up">
+              <div class="term-caption">Atrito</div>
+              <h3>Esfregou</h3>
+              <p>Materiais diferentes trocam elétrons e saem com sinais opostos.</p>
+            </div>
+            <div class="comparison-card resinosa fragment fade-up">
+              <div class="term-caption">Contato</div>
+              <h3>Encostou</h3>
+              <p>As cargas se redistribuem e os corpos tendem a terminar com o mesmo sinal.</p>
+            </div>
+            <div class="comparison-card vitrea fragment fade-up">
+              <div class="term-caption">Indução</div>
+              <h3>Aproximou</h3>
+              <p>Sem toque, o campo polariza; com aterramento, surge carga líquida final.</p>
+            </div>
+          </div>
+          <div class="law-strip fragment fade-up">
+            Em qualquer processo, a carga elétrica total do sistema isolado permanece constante.
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/math/math.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      controls: true,
+      progress: true,
+      center: true,
+      transition: "slide",
+      backgroundTransition: "fade",
+      width: 1280,
+      height: 720,
+      margin: 0.04,
+      navigationMode: "linear",
+      viewDistance: 4,
+      plugins: [RevealMath.KaTeX],
+      katex: {
+        version: "latest",
+        delimiters: [
+          { left: "$$", right: "$$", display: true },
+          { left: "$", right: "$", display: false },
+          { left: "\\(", right: "\\)", display: false },
+          { left: "\\[", right: "\\]", display: true }
+        ],
+        ignoredTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      }
+    });
+  </script>
+</body>
+
+</html>

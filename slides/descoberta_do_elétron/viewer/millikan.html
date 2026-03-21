@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body { margin: 0; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: #1C1917;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Inter', sans-serif;
+            color: #E7E5E4;
+            position: relative;
+            overflow: hidden;
+        }
+        .oil-glow {
+            position: absolute;
+            width: 420px;
+            height: 420px;
+            background: radial-gradient(circle, rgba(20, 184, 166, 0.1) 0%, rgba(28, 25, 23, 0) 70%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+        }
+        .header {
+            padding-top: 60px; /* must keep */
+            text-align: center;
+            z-index: 1;
+            width: 100%;
+        }
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            color: #FDE047;
+            margin-bottom: 20px;
+        }
+        .main-content {
+            display: flex;
+            width: 90%;
+            justify-content: space-between;
+            padding-top: 24px; /* reduced to save height */
+            z-index: 1;
+        }
+        .column {
+            flex: 1;
+            padding-top: 8px; /* reduced to save height */
+        }
+        .left-column {
+            padding-right: 40px;
+            border-right: 1px dotted #14B8A6;
+        }
+        .right-column {
+            padding-left: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .point {
+            margin-bottom: 14px; /* reduced to save space */
+            font-size: 22px;
+            line-height: 1.6;
+        }
+        .point strong {
+            color: #14B8A6;
+        }
+        .value-box {
+            padding-top: 12px; /* reduced to save height */
+        }
+        .value-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 56px;
+            color: #F97316;
+            margin-bottom: 6px;
+        }
+        .value-desc {
+            font-size: 24px;
+            color: #E7E5E4;
+            opacity: 0.8;
+        }
+        .quantization-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            color: #FDE047;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="oil-glow"></div>
+        <div class="header">
+            <h2>Millikan e a Precisão da Carga Elementar</h2>
+        </div>
+        <div class="main-content">
+            <div class="column left-column">
+                <div class="point">
+                    Em 1909, <strong>Robert Millikan</strong> realizou o famoso experimento da gota de óleo para medir a carga do elétron.
+                </div>
+                <div class="point">
+                    Ele equilibrou a força gravitacional com a força elétrica em minúsculas gotas de óleo carregadas.
+                </div>
+                <div class="point">
+                    Millikan provou que a carga elétrica é <strong>quantizada</strong>: ela sempre ocorre em múltiplos de um valor fundamental.
+                </div>
+            </div>
+            <div class="column right-column">
+                <div class="value-box">
+                    <div class="value-title">e ≈ 1,6 × 10⁻¹⁹ C</div>
+                    <div class="value-desc">A Carga Elementar</div>
+                </div>
+                <div class="quantization-title">A Unidade Fundamental</div>
+                <div class="point" style="margin-top: 10px; font-size: 18px;">
+                    Essa descoberta consolidou a natureza discreta da eletricidade e é uma das constantes fundamentais do universo.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

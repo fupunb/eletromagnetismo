@@ -1,0 +1,643 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apresentacao | A Grande Narrativa da Eletrostatica</title>
+  <style>
+    :root {
+      --slide-width: 1280;
+      --slide-height: 720;
+      --panel: rgba(16, 17, 20, 0.72);
+      --panel-strong: rgba(21, 24, 30, 0.88);
+      --text: #f7f4ee;
+      --muted: rgba(247, 244, 238, 0.72);
+      --accent: #79e7d6;
+      --accent-2: #ffbf6b;
+      --line: rgba(255, 255, 255, 0.08);
+      --shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at top left, rgba(121, 231, 214, 0.12), transparent 28%),
+        radial-gradient(circle at top right, rgba(255, 191, 107, 0.14), transparent 24%),
+        linear-gradient(135deg, #0f1116 0%, #17131b 50%, #111418 100%);
+      color: var(--text);
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    body.chrome-hidden .chrome {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    #app {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .ambient {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.03), transparent 35%),
+        linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.22));
+    }
+
+    .viewer-stage {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: calc(var(--slide-width) * 1px);
+      height: calc(var(--slide-height) * 1px);
+      transform-origin: center center;
+      box-shadow: var(--shadow);
+      border-radius: 18px;
+      overflow: hidden;
+      background: #101010;
+      transition: transform 220ms ease, opacity 180ms ease;
+      z-index: 2;
+    }
+
+    .viewer-stage.loading {
+      opacity: 0.82;
+    }
+
+    .viewer-frame {
+      width: calc(var(--slide-width) * 1px);
+      height: calc(var(--slide-height) * 1px);
+      border: 0;
+      display: block;
+      background: #111;
+    }
+
+    .chrome {
+      transition: opacity 180ms ease;
+      z-index: 5;
+    }
+
+    .topbar {
+      position: absolute;
+      left: 24px;
+      right: 24px;
+      top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      pointer-events: none;
+    }
+
+    .topbar-panel,
+    .bottombar,
+    .help {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .topbar-panel {
+      padding: 12px 14px;
+      pointer-events: auto;
+      min-width: 0;
+    }
+
+    .project-name {
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+
+    .slide-name {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: min(52vw, 720px);
+    }
+
+    .counter {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .counter strong {
+      color: var(--text);
+      font-size: 16px;
+    }
+
+    .bottombar {
+      position: absolute;
+      left: 50%;
+      bottom: 20px;
+      transform: translateX(-50%);
+      width: min(960px, calc(100vw - 32px));
+      padding: 12px 14px;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 14px;
+      z-index: 6;
+    }
+
+    .controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    button {
+      appearance: none;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: var(--panel-strong);
+      color: var(--text);
+      border-radius: 999px;
+      padding: 10px 14px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: transform 120ms ease, background 120ms ease, border-color 120ms ease;
+    }
+
+    button:hover {
+      transform: translateY(-1px);
+      border-color: rgba(121, 231, 214, 0.35);
+    }
+
+    button:disabled {
+      opacity: 0.45;
+      cursor: default;
+      transform: none;
+    }
+
+    .progress-shell {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .progress-label {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: 12px;
+      color: var(--muted);
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .progress-track {
+      position: relative;
+      width: 100%;
+      height: 8px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 0;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      transition: width 180ms ease;
+    }
+
+    .click-zone {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 22vw;
+      min-width: 120px;
+      z-index: 4;
+      cursor: pointer;
+    }
+
+    .click-zone.left {
+      left: 0;
+      background: linear-gradient(90deg, rgba(0, 0, 0, 0.12), transparent);
+    }
+
+    .click-zone.right {
+      right: 0;
+      background: linear-gradient(270deg, rgba(0, 0, 0, 0.12), transparent);
+    }
+
+    .click-zone:hover .zone-label {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .zone-label {
+      position: absolute;
+      top: 50%;
+      transform: translateY(8px);
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0;
+      transition: opacity 150ms ease, transform 150ms ease;
+      pointer-events: none;
+    }
+
+    .click-zone.left .zone-label {
+      left: 20px;
+    }
+
+    .click-zone.right .zone-label {
+      right: 20px;
+    }
+
+    .help {
+      position: absolute;
+      right: 24px;
+      top: 92px;
+      padding: 10px 12px;
+      font-size: 12px;
+      line-height: 1.45;
+      color: var(--muted);
+      max-width: 260px;
+      z-index: 5;
+    }
+
+    .loading-indicator {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 3;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(8, 9, 11, 0.78);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0;
+      transition: opacity 150ms ease;
+      pointer-events: none;
+    }
+
+    .loading-indicator.visible {
+      opacity: 1;
+    }
+
+    @media (max-width: 700px) {
+      .topbar {
+        left: 12px;
+        right: 12px;
+        top: 12px;
+      }
+
+      .slide-name {
+        max-width: 58vw;
+        font-size: 15px;
+      }
+
+      .help {
+        display: none;
+      }
+
+      .bottombar {
+        width: calc(100vw - 24px);
+        bottom: 12px;
+        padding: 10px 12px;
+        grid-template-columns: 1fr;
+      }
+
+      .click-zone {
+        width: 28vw;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div class="ambient" aria-hidden="true"></div>
+
+    <div class="click-zone left" id="clickPrev" aria-label="Slide anterior">
+      <div class="zone-label">Anterior</div>
+    </div>
+    <div class="click-zone right" id="clickNext" aria-label="Próximo slide">
+      <div class="zone-label">Próximo</div>
+    </div>
+
+    <div class="viewer-stage loading" id="stage">
+      <iframe
+        id="slideFrame"
+        class="viewer-frame"
+        title="Slide atual"
+        loading="eager"
+        referrerpolicy="no-referrer"
+      ></iframe>
+    </div>
+
+    <div class="loading-indicator visible" id="loadingIndicator">Carregando slide</div>
+
+    <div class="chrome topbar">
+      <div class="topbar-panel">
+        <div class="project-name" id="projectName">Apresentacao</div>
+        <div class="slide-name" id="slideTitle">Carregando...</div>
+      </div>
+      <div class="topbar-panel counter">
+        <strong id="slideCounter">1 / 1</strong>
+        <span id="slideId">title.html</span>
+      </div>
+    </div>
+
+    <!--
+    <div class="chrome help">
+      Setas esquerda/direita navegam. Clique nas laterais para voltar ou avancar. Pressione <strong>F</strong> para tela cheia e <strong>H</strong> para ocultar a interface.
+    </div>
+    -->
+
+    <div class="chrome bottombar">
+      <div class="controls">
+        <button id="prevBtn" type="button">← Anterior</button>
+        <button id="nextBtn" type="button">Próximo →</button>
+      </div>
+      <div class="progress-shell">
+        <div class="progress-label">
+          <span id="progressText">Slide 1</span>
+          <span id="progressMeta">0%</span>
+        </div>
+        <div class="progress-track" aria-hidden="true">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+      </div>
+      <div class="controls">
+        <button id="fullscreenBtn" type="button">Tela cheia</button>
+      </div>
+    </div>
+  </div>
+
+  <script id="slideManifest" type="application/json">
+    {
+      "project_info": {
+        "title": "A Grande Narrativa da Eletrostática"
+      },
+      "slides": [
+        { "id": "title", "pageNum": 1 },
+        { "id": "intro", "pageNum": 2 },
+        { "id": "ato1", "pageNum": 3 },
+        { "id": "gilbert", "pageNum": 4 },
+        { "id": "ato2", "pageNum": 5 },
+        { "id": "franklin", "pageNum": 6 },
+        { "id": "ato3", "pageNum": 7 },
+        { "id": "ato4", "pageNum": 8 },
+        { "id": "thomson", "pageNum": 9 },
+        { "id": "millikan", "pageNum": 10 },
+        { "id": "timeline", "pageNum": 11 },
+        { "id": "conclusion", "pageNum": 12 }
+      ],
+      "outline": [
+        { "id": "title", "title": "A Grande Narrativa da Eletrostática" },
+        { "id": "intro", "title": "Transformando Fórmulas em um Mistério Científico" },
+        { "id": "ato1", "title": "O Despertar na Grécia Antiga (600 a.C.)" },
+        { "id": "gilbert", "title": "William Gilbert e o Nascimento do Electricus (1600)" },
+        { "id": "ato2", "title": "O Combate das Cargas (1730)" },
+        { "id": "franklin", "title": "O Erro de Benjamin Franklin e o Fluido Elétrico (1747)" },
+        { "id": "ato3", "title": "Michael Faraday e a Revolução do Campo (1830)" },
+        { "id": "ato4", "title": "A Busca pelo Éter e os Raios Catódicos (Séc. XIX)" },
+        { "id": "thomson", "title": "J.J. Thomson e a Descoberta do Elétron (1897)" },
+        { "id": "millikan", "title": "Millikan e a Precisão da Carga Elementar (1909)" },
+        { "id": "timeline", "title": "Linha do Tempo: A Evolução da Eletrostática" },
+        { "id": "conclusion", "title": "Conclusão: Do Mistério à Tecnologia" }
+      ]
+    }
+  </script>
+
+  <script>
+    (async function () {
+      const SLIDE_WIDTH = 1280;
+      const SLIDE_HEIGHT = 720;
+
+      const stage = document.getElementById("stage");
+      const frame = document.getElementById("slideFrame");
+      const loadingIndicator = document.getElementById("loadingIndicator");
+      const projectName = document.getElementById("projectName");
+      const slideTitle = document.getElementById("slideTitle");
+      const slideCounter = document.getElementById("slideCounter");
+      const slideId = document.getElementById("slideId");
+      const progressText = document.getElementById("progressText");
+      const progressMeta = document.getElementById("progressMeta");
+      const progressFill = document.getElementById("progressFill");
+      const prevBtn = document.getElementById("prevBtn");
+      const nextBtn = document.getElementById("nextBtn");
+      const fullscreenBtn = document.getElementById("fullscreenBtn");
+      const clickPrev = document.getElementById("clickPrev");
+      const clickNext = document.getElementById("clickNext");
+
+      const fallbackManifest = JSON.parse(document.getElementById("slideManifest").textContent);
+
+      async function loadManifest() {
+        try {
+          const response = await fetch("slide_state.json", { cache: "no-store" });
+          if (!response.ok) {
+            throw new Error("Manifest fetch failed");
+          }
+          return await response.json();
+        } catch (error) {
+          return fallbackManifest;
+        }
+      }
+
+      const manifest = await loadManifest();
+      const outlineById = new Map((manifest.outline || []).map((item) => [item.id, item]));
+      const slides = (manifest.slides || [])
+        .slice()
+        .sort((a, b) => (a.pageNum || 0) - (b.pageNum || 0))
+        .map((slide, index) => ({
+          ...slide,
+          filename: slide.id + ".html",
+          title: outlineById.get(slide.id)?.title || slide.id,
+          index
+        }));
+
+      let currentIndex = 0;
+
+      function parseHash() {
+        const raw = window.location.hash.replace(/^#/, "").trim();
+        if (!raw) {
+          return 0;
+        }
+
+        const numeric = Number(raw);
+        if (Number.isInteger(numeric) && numeric >= 1 && numeric <= slides.length) {
+          return numeric - 1;
+        }
+
+        const byId = slides.findIndex((slide) => slide.id === raw);
+        return byId >= 0 ? byId : 0;
+      }
+
+      function updateScale() {
+        const viewportWidth = window.innerWidth;
+        const viewportHeight = window.innerHeight;
+        const scale = Math.min(viewportWidth / SLIDE_WIDTH, viewportHeight / SLIDE_HEIGHT);
+        stage.style.transform = "translate(-50%, -50%) scale(" + scale + ")";
+      }
+
+      function setLoading(isLoading) {
+        stage.classList.toggle("loading", isLoading);
+        loadingIndicator.classList.toggle("visible", isLoading);
+      }
+
+      function syncUi(slide) {
+        const humanIndex = currentIndex + 1;
+        const percent = Math.round((humanIndex / slides.length) * 100);
+
+        document.title = slide.title + " | " + manifest.project_info.title;
+        projectName.textContent = manifest.project_info.title || "Apresentacao";
+        slideTitle.textContent = slide.title;
+        slideCounter.textContent = humanIndex + " / " + slides.length;
+        slideId.textContent = slide.filename;
+        progressText.textContent = "Slide " + humanIndex + ": " + slide.title;
+        progressMeta.textContent = percent + "%";
+        progressFill.style.width = percent + "%";
+        prevBtn.disabled = currentIndex === 0;
+        nextBtn.disabled = currentIndex === slides.length - 1;
+      }
+
+      function navigateTo(index, options) {
+        const nextIndex = Math.max(0, Math.min(index, slides.length - 1));
+        const slide = slides[nextIndex];
+        if (!slide) {
+          return;
+        }
+
+        currentIndex = nextIndex;
+        setLoading(true);
+        syncUi(slide);
+
+        if (!options || options.updateHash !== false) {
+          window.location.hash = String(currentIndex + 1);
+        }
+
+        frame.src = slide.filename;
+      }
+
+      function goNext() {
+        navigateTo(currentIndex + 1);
+      }
+
+      function goPrev() {
+        navigateTo(currentIndex - 1);
+      }
+
+      function toggleFullscreen() {
+        if (!document.fullscreenElement) {
+          document.documentElement.requestFullscreen().catch(() => {});
+          return;
+        }
+        document.exitFullscreen().catch(() => {});
+      }
+
+      frame.addEventListener("load", function () {
+        setLoading(false);
+      });
+
+      prevBtn.addEventListener("click", goPrev);
+      nextBtn.addEventListener("click", goNext);
+      clickPrev.addEventListener("click", goPrev);
+      clickNext.addEventListener("click", goNext);
+      fullscreenBtn.addEventListener("click", toggleFullscreen);
+
+      window.addEventListener("resize", updateScale);
+      window.addEventListener("hashchange", function () {
+        navigateTo(parseHash(), { updateHash: false });
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "ArrowRight" || event.key === "PageDown" || event.key === " ") {
+          event.preventDefault();
+          goNext();
+          return;
+        }
+
+        if (event.key === "ArrowLeft" || event.key === "PageUp") {
+          event.preventDefault();
+          goPrev();
+          return;
+        }
+
+        if (event.key === "Home") {
+          event.preventDefault();
+          navigateTo(0);
+          return;
+        }
+
+        if (event.key === "End") {
+          event.preventDefault();
+          navigateTo(slides.length - 1);
+          return;
+        }
+
+        if (event.key.toLowerCase() === "f") {
+          event.preventDefault();
+          toggleFullscreen();
+          return;
+        }
+
+        if (event.key.toLowerCase() === "h") {
+          event.preventDefault();
+          document.body.classList.toggle("chrome-hidden");
+        }
+      });
+
+      let touchStartX = null;
+      window.addEventListener("touchstart", function (event) {
+        touchStartX = event.changedTouches[0].clientX;
+      }, { passive: true });
+
+      window.addEventListener("touchend", function (event) {
+        if (touchStartX === null) {
+          return;
+        }
+        const deltaX = event.changedTouches[0].clientX - touchStartX;
+        touchStartX = null;
+
+        if (Math.abs(deltaX) < 40) {
+          return;
+        }
+
+        if (deltaX < 0) {
+          goNext();
+        } else {
+          goPrev();
+        }
+      }, { passive: true });
+
+      updateScale();
+      navigateTo(parseHash(), { updateHash: false });
+    })();
+  </script>
+</body>
+</html>

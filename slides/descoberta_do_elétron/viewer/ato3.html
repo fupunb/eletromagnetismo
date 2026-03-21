@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400&display=swap" rel="stylesheet">
+    <style>
+        html,body{margin:0;height:100%}
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: #1C1917;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Inter', sans-serif;
+            color: #E7E5E4;
+            position: relative;
+            overflow: hidden;
+        }
+        .field-glow {
+            position: absolute;
+            width: 700px;
+            height: 700px;
+            background: radial-gradient(circle, rgba(20, 184, 166, 0.08) 0%, rgba(28, 25, 23, 0) 70%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+        }
+        .header {
+            padding-top: 60px; /* keep top padding */
+            text-align: center;
+            z-index: 1;
+        }
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            color: #FDE047;
+            margin-bottom: 8px;
+        }
+        .subtitle {
+            font-size: 24px;
+            color: #14B8A6;
+            margin-bottom: 20px;
+        }
+        .main-content {
+            display: flex;
+            width: 90%;
+            justify-content: space-around;
+            z-index: 1;
+            padding-top: 8px;
+        }
+        .column {
+            flex: 1;
+            padding-top: 4px;
+            margin: 0 10px;
+            text-align: center;
+        }
+        .column-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            color: #F97316;
+            margin-bottom: 10px;
+            border-bottom: 1px dotted #14B8A6;
+            padding-top: 4px;
+        }
+        .column-text {
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: left;
+        }
+        .equation-box {
+            background: rgba(255, 255, 255, 0.03);
+            padding-top: 8px;
+            margin-top: 8px;
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            color: #FDE047;
+            text-align: center;
+        }
+        .divider {
+            width: 1px;
+            background: linear-gradient(to bottom, transparent, #14B8A6, transparent);
+            height: 200px;
+            margin-top: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="field-glow"></div>
+        <div class="header">
+            <h2>Ato 3: Michael Faraday e a Revolução do Campo</h2>
+            <div class="subtitle">O fim da "Ação à Distância" (1830)</div>
+        </div>
+        <div class="main-content">
+            <div class="column">
+                <div class="column-title">O Novo Paradigma</div>
+                <div class="column-text">
+                    Faraday rejeitou a ideia de que cargas se influenciavam instantaneamente pelo vazio. Ele propôs que o espaço é preenchido por <strong>linhas de força</strong>.
+                </div>
+            </div>
+            <div class="divider" aria-hidden="true"></div>
+            <div class="column">
+                <div class="column-title">O Conceito de Campo</div>
+                <div class="column-text">
+                    O espaço ao redor de uma carga não é vazio; ele é <strong>modificado</strong>. O campo elétrico é a propriedade do espaço que exerce força sobre outras cargas.
+                </div>
+            </div>
+            <div class="divider" aria-hidden="true"></div>
+            <div class="column">
+                <div class="column-title">A Equação</div>
+                <div class="column-text">
+                    A formalização matemática do modelo físico de Faraday:
+                </div>
+                <div class="equation-box">
+                    E = F / q
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

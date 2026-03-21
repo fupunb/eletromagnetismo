@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400&display=swap" rel="stylesheet">
+    <style>
+        /* reset default body margin (was creating extra 8px) */
+        body { margin: 0; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px; /* keep as required */
+            background: #1C1917;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Inter', sans-serif;
+            color: #E7E5E4;
+            position: relative;
+            overflow: hidden;
+        }
+        .beam-glow {
+            position: absolute;
+            width: 600px;
+            height: 200px;
+            background: radial-gradient(ellipse, rgba(20, 184, 166, 0.15) 0%, rgba(28, 25, 23, 0) 70%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-5deg);
+            z-index: 0;
+        }
+        .header {
+            padding-top: 60px; /* do not change - required */
+            text-align: center;
+            z-index: 1;
+            width: 100%;
+        }
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            color: #FDE047;
+            margin-bottom: 16px; /* slightly reduced */
+        }
+        .main-content {
+            display: flex;
+            width: 90%;
+            justify-content: space-between;
+            padding-top: 28px; /* reduced from 40px */
+            z-index: 1;
+        }
+        .column {
+            flex: 1;
+            padding-top: 10px; /* reduced from 20px */
+        }
+        .left-column {
+            padding-right: 36px; /* small shrink */
+            border-right: 1px dotted #14B8A6;
+        }
+        .right-column {
+            padding-left: 36px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .point {
+            margin-bottom: 18px; /* reduced from 30px */
+            font-size: 22px;
+            line-height: 1.6;
+        }
+        .point strong {
+            color: #14B8A6;
+        }
+        .discovery-box {
+            padding-top: 20px; /* reduced from 40px */
+        }
+        .discovery-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            color: #F97316;
+            margin-bottom: 12px; /* slightly reduced */
+        }
+        .discovery-desc {
+            font-size: 24px;
+            color: #E7E5E4;
+            line-height: 1.4;
+        }
+        .ratio-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            color: #FDE047;
+            margin-top: 18px; /* reduced from 30px */
+            border-top: 1px dotted #14B8A6;
+            padding-top: 12px; /* reduced from 20px */
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="beam-glow"></div>
+        <div class="header">
+            <h2>J.J. Thomson e a Descoberta do Elétron (1897)</h2>
+        </div>
+        <div class="main-content">
+            <div class="column left-column">
+                <div class="point">
+                    Thomson utilizou <strong>tubos de raios catódicos</strong> e aplicou campos elétricos e magnéticos simultâneos.
+                </div>
+                <div class="point">
+                    Ele observou que o feixe luminoso se desviava, provando que era composto por <strong>partículas carregadas negativamente</strong>.
+                </div>
+                <div class="point">
+                    O átomo, antes considerado indivisível, foi finalmente "quebrado" pela ciência.
+                </div>
+            </div>
+            <div class="column right-column">
+                <div class="discovery-box">
+                    <div class="discovery-title">Uma Partícula Real</div>
+                    <div class="discovery-desc">O elétron não era apenas uma unidade de carga, mas um constituinte físico da matéria.</div>
+                </div>
+                <div class="ratio-text">
+                    1800x mais leve que o Hidrogênio
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

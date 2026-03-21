@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400&display=swap" rel="stylesheet">
+    <style>
+        /* remove default body margin so slide sits at top */
+        body { margin: 0; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px; /* keep as required */
+            background: #1C1917;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Inter', sans-serif;
+            color: #E7E5E4;
+            position: relative;
+            overflow: hidden;
+            margin-top: -1px; /* shift up 1px to make total height < 720px (calculation: top -1 + min-height 720 = 719) */
+        }
+        .header {
+            padding-top: 60px; /* must not be reduced */
+            text-align: center;
+            z-index: 1;
+            width: 100%;
+        }
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            color: #FDE047;
+            margin-bottom: 40px;
+        }
+        .table-container {
+            width: 90%;
+            z-index: 1;
+            border-top: 1px dotted #14B8A6;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 12px; /* reduced from 20 to save vertical space */
+        }
+        th {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            color: #14B8A6;
+            text-align: left;
+            padding-top: 12px; /* reduced from 20 */
+            border-bottom: 1px dotted #14B8A6;
+        }
+        td {
+            font-size: 18px;
+            padding-top: 12px; /* reduced from 20 */
+            line-height: 1.4;
+            vertical-align: top;
+        }
+        .year-col { width: 15%; color: #F97316; font-weight: bold; }
+        .name-col { width: 25%; color: #FDE047; font-family: 'Playfair Display', serif; font-size: 22px; }
+        .desc-col { width: 60%; }
+        .electric-glow {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(20, 184, 166, 0.05) 0%, rgba(28, 25, 23, 0) 70%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="electric-glow"></div>
+        <div class="header">
+            <h2>Linha do Tempo: A Evolução da Eletrostática</h2>
+        </div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="year-col">Período</th>
+                        <th class="name-col">Cientista</th>
+                        <th class="desc-col">Contribuição Principal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="year-col">~600 a.C.</td>
+                        <td class="name-col">Thales de Mileto</td>
+                        <td class="desc-col">Observação inicial da atração elétrica do âmbar (elektron).</td>
+                    </tr>
+                    <tr>
+                        <td class="year-col">1730 - 1747</td>
+                        <td class="name-col">Du Fay &amp; Franklin</td>
+                        <td class="desc-col">Descoberta de cargas opostas/iguais e o modelo de fluido único (+ e -).</td>
+                    </tr>
+                    <tr>
+                        <td class="year-col">Séc. XIX</td>
+                        <td class="name-col">Michael Faraday</td>
+                        <td class="desc-col">Introdução do conceito de campo elétrico e linhas de força no espaço.</td>
+                    </tr>
+                    <tr>
+                        <td class="year-col">1897</td>
+                        <td class="name-col">J. J. Thomson</td>
+                        <td class="desc-col">Descoberta do elétron como partícula subatômica através dos raios catódicos.</td>
+                    </tr>
+                    <tr>
+                        <td class="year-col">1909</td>
+                        <td class="name-col">Robert Millikan</td>
+                        <td class="desc-col">Medida precisa da carga elementar e prova da quantização da carga.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

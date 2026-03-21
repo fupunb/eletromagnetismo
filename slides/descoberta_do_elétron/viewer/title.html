@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400&display=swap" rel="stylesheet">
+    <style>
+        html, body { margin: 0; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px; /* keep as required */
+            background: #1C1917;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            top: -1px; /* shift up 1px so total bottom < 720px */
+            overflow: hidden;
+            font-family: 'Inter', sans-serif;
+            color: #E7E5E4;
+        }
+        .electric-glow {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(20, 184, 166, 0.15) 0%, rgba(28, 25, 23, 0) 70%);
+            z-index: 0;
+        }
+        .content-box {
+            z-index: 1;
+            text-align: center;
+            border-top: 1px dotted #14B8A6;
+            border-bottom: 1px dotted #14B8A6;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            width: 80%;
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 64px;
+            color: #FDE047;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        p {
+            font-size: 32px;
+            color: #14B8A6;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .footer {
+            position: absolute;
+            bottom: 40px;
+            font-size: 20px;
+            color: #E7E5E4;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="electric-glow"></div>
+        <div class="content-box">
+            <h1>A Grande Narrativa da Eletrostática</h1>
+            <p>De Thales ao Elétron</p>
+        </div>
+        <div class="footer">Aula de Física: Uma Jornada de Descobertas</div>
+    </div>
+</body>
+</html>
