@@ -26,13 +26,13 @@ jobs:
         with:
           node-version: 20
 
-      - name: Generate slides index.html
+      - name: Generate docs index.html
         run: node scripts/generate-index.mjs
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: docs
 
   deploy:
     environment:

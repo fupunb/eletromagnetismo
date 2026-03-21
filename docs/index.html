@@ -1,45 +1,89 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Slides</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/beige.css" id="theme">
     <style>
-      :root {
-        color-scheme: light;
+      .reveal .slides {
+        text-align: left;
       }
 
-      body {
-        font-family: system-ui, sans-serif;
-        max-width: 800px;
-        margin: 40px auto;
-        padding: 0 16px;
-        line-height: 1.6;
+      .reveal section {
+        box-sizing: border-box;
+        padding: 0.6em 1.2em;
       }
 
-      h1 {
-        margin-bottom: 0.5rem;
+      .reveal h1 {
+        margin-bottom: 0.35em;
       }
 
-      ul {
-        padding-left: 1.25rem;
+      .reveal .deck-intro {
+        margin-bottom: 1rem;
+        font-size: 0.9em;
       }
 
-      li + li {
-        margin-top: 0.35rem;
+      .reveal .deck-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.45em 1.4em;
+        list-style: disc;
       }
 
-      a {
-        color: inherit;
+      .reveal .deck-list li {
+        margin-left: 1.15em;
+        line-height: 1.4;
+      }
+
+      .reveal .deck-list a {
+        text-decoration-thickness: 0.06em;
+        text-underline-offset: 0.12em;
+      }
+
+      .reveal .deck-meta {
+        margin-top: 1.5rem;
+        font-size: 0.55em;
+        opacity: 0.72;
+      }
+
+      @media (max-width: 900px) {
+        .reveal .deck-list {
+          grid-template-columns: 1fr;
+        }
       }
     </style>
   </head>
   <body>
-    <h1>Slides</h1>
-    <p>Select a deck:</p>
-    <ul>
-      <li><a href="./descoberta_do_el%C3%A9tron/">descoberta do elétron</a></li>
-      <li><a href="./processos_de_eletriza%C3%A7%C3%A3o/">processos de eletrização</a></li>
-    </ul>
+    <div class="reveal">
+      <div class="slides">
+      <section>
+        <h1>Slides</h1>
+        <p class="deck-intro">Selecione uma apresentação:</p>
+        <ul class="deck-list">
+              <li><a href="./descoberta_do_el%C3%A9tron/">descoberta do elétron</a></li>
+              <li><a href="./processos_de_eletriza%C3%A7%C3%A3o/">processos de eletrização</a></li>
+        </ul>
+      </section>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+    <script>
+      Reveal.initialize({
+        hash: true,
+        controls: true,
+        progress: true,
+        center: true,
+        transition: "slide",
+        backgroundTransition: "fade",
+        navigationMode: "linear",
+        width: 1280,
+        height: 720,
+        margin: 0.08
+      });
+    </script>
   </body>
 </html>
