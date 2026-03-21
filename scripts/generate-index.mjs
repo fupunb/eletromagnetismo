@@ -2,7 +2,7 @@ import { access, mkdir, readdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 const repoRoot = process.cwd();
-const slidesDir = path.join(repoRoot, "slides");
+const slidesDir = path.join(repoRoot, "docs");
 const outputFile = path.join(slidesDir, "index.html");
 
 async function exists(filePath) {
@@ -31,7 +31,7 @@ const entries = await readdir(slidesDir, { withFileTypes: true });
 
 const slideFolders = [];
 for (const entry of entries) {
-  if (!entry.isDirectory()) continue;
+  if (!entry.isDirectory()) continue; 
   if (entry.name.startsWith(".")) continue;
 
   const childIndex = path.join(slidesDir, entry.name, "index.html");
