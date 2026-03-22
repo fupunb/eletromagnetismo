@@ -8,17 +8,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Literata:opsz,wght@7..72,400;7..72,500;7..72,700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reset.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
-  <link rel="stylesheet" href="../css/processos_eletrizacao_theme.css">
+  <link rel="stylesheet" href="../css/theme_eletrizacao.css">
 </head>
 
 <body>
   <div class="reveal">
     <div class="slides">
-      <section class="deck-slide hero">
+      <section class="deck-slide hero deck-slide--manifesto">
         <div class="slide-inner">
           <div class="eyebrow">Eletromagnetismo em Ciências</div>
           <div class="hero-grid">
@@ -41,7 +41,7 @@
         </div>
       </section>
 
-      <section class="deck-slide">
+      <section class="deck-slide deck-slide--definition">
         <div class="slide-inner">
           <div class="eyebrow">Ideia central</div>
           <h2>O que significa eletrizar um corpo?</h2>
@@ -50,9 +50,11 @@
           <div class="grid-2">
             <div class="panel">
               <h3>Carga líquida</h3>
-              <p>\[
-                Q = n \cdot e
-                \]</p>
+              <div class="equation-plate">
+                <p>\[
+                  Q = n \cdot e
+                  \]</p>
+              </div>
               <p>Nessa expressão, <strong>\(n\)</strong> é o número de elétrons transferidos e
                 <strong>\(e = 1{,}6 \times 10^{-19}\,\mathrm{C}\)</strong> é a carga elementar.
               </p>
@@ -68,7 +70,7 @@
         </div>
       </section>
 
-      <section class="deck-slide">
+      <section class="deck-slide deck-slide--overview">
         <div class="slide-inner">
           <div class="eyebrow">Visão geral</div>
           <h2>Os três processos em uma única imagem mental</h2>
@@ -98,7 +100,7 @@
         </div>
       </section>
 
-      <section class="deck-slide">
+      <section class="deck-slide deck-slide--process">
         <div class="slide-inner">
           <div class="eyebrow">Processo 1</div>
           <h2>Eletrização por Atrito</h2>
@@ -118,15 +120,17 @@
               <div class="term-caption">Modelo microscópico</div>
               <div class="term-word">Transferência de elétrons</div>
               <p>O atrito não cria carga do nada. Ele apenas desloca elétrons de um material para outro.</p>
-              <p>\[
-                Q_A + Q_B = \text{constante}
-                \]</p>
+              <div class="equation-plate equation-plate--compact">
+                <p>\[
+                  Q_A + Q_B = \text{constante}
+                  \]</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="deck-slide">
+      <section class="deck-slide deck-slide--table">
         <div class="slide-inner">
           <div class="eyebrow">Atrito</div>
           <h2>Série triboelétrica e exemplos cotidianos</h2>
@@ -175,7 +179,7 @@
         </div>
       </section>
 
-      <section class="deck-slide">
+      <section class="deck-slide deck-slide--process">
         <div class="slide-inner">
           <div class="eyebrow">Processo 2</div>
           <h2>Eletrização por Contato</h2>
@@ -196,15 +200,17 @@
               <div class="metric-value">Esferas idênticas</div>
               <p>Se uma esfera tem carga inicial \(Q\) e a outra está neutra, após o contato ideal cada uma pode ficar
                 com:</p>
-              <p>\[
-                Q_f = \frac{Q}{2}
-                \]</p>
+              <div class="equation-plate equation-plate--compact">
+                <p>\[
+                  Q_f = \frac{Q}{2}
+                  \]</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="deck-slide">
+      <section class="deck-slide deck-slide--example">
         <div class="slide-inner">
           <div class="eyebrow">Contato</div>
           <h2>Exemplo resolvido: duas esferas condutoras idênticas</h2>
@@ -213,11 +219,13 @@
               <h3>Situação</h3>
               <p>Esfera A com \(Q_A = +8\,\mu\mathrm{C}\) toca a esfera B inicialmente neutra.</p>
               <p>Como são idênticas, a carga total se divide de modo simétrico:</p>
-              <p>\[
-                Q_{\text{total}} = +8\,\mu\mathrm{C}
-                \qquad
-                Q'_A = Q'_B = +4\,\mu\mathrm{C}
-                \]</p>
+              <div class="equation-plate">
+                <p>\[
+                  Q_{\text{total}} = +8\,\mu\mathrm{C}
+                  \qquad
+                  Q'_A = Q'_B = +4\,\mu\mathrm{C}
+                  \]</p>
+              </div>
             </div>
             <div class="quote-panel fragment fade-up">
               <p class="quote-text">Contato não significa “copiar” a carga inicial. Significa redistribuir a carga
@@ -229,7 +237,7 @@
         </div>
       </section>
 
-      <section class="deck-slide">
+      <section class="deck-slide deck-slide--overview">
         <div class="slide-inner">
           <div class="eyebrow">Processo 3</div>
           <h2>Eletrização por Indução</h2>
@@ -261,7 +269,7 @@
         </div>
       </section>
 
-      <section class="deck-slide">
+      <section class="deck-slide deck-slide--contrast">
         <div class="slide-inner">
           <div class="eyebrow">Indução</div>
           <h2>O papel do campo elétrico e do aterramento</h2>
@@ -287,7 +295,7 @@
         </div>
       </section>
 
-      <section class="deck-slide">
+      <section class="deck-slide deck-slide--table">
         <div class="slide-inner">
           <div class="eyebrow">Comparação</div>
           <h2>Como distinguir os três processos</h2>
@@ -326,7 +334,7 @@
         </div>
       </section>
 
-      <section class="deck-slide">
+      <section class="deck-slide deck-slide--applications">
         <div class="slide-inner">
           <div class="eyebrow">Aplicações</div>
           <h2>Onde esses processos aparecem no cotidiano?</h2>
@@ -352,7 +360,7 @@
         </div>
       </section>
 
-      <section class="deck-slide">
+      <section class="deck-slide deck-slide--exercise">
         <div class="slide-inner">
           <div class="eyebrow">Exercício</div>
           <h2>Raciocínio rápido para sala de aula</h2>
@@ -373,7 +381,7 @@
         </div>
       </section>
 
-      <section class="deck-slide">
+      <section class="deck-slide deck-slide--closing">
         <div class="slide-inner">
           <div class="eyebrow">Síntese final</div>
           <h2>Uma regra de identificação para não confundir</h2>
