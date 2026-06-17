@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eletricidade e Magnetismo | Reveal.js</title>
+  <link rel="icon" href="../icons/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="../icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../icons/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../icons/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="../icons/android-chrome-512x512.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
+  <link rel="stylesheet" href="../css/theme_eletro.css">
+  <style>
+    .diagram-shell {
+      position: relative;
+      border-radius: 24px;
+      padding: 16px;
+      background:
+        radial-gradient(circle at 20% 22%, rgba(120, 240, 225, 0.12), transparent 34%),
+        radial-gradient(circle at 78% 18%, rgba(255, 142, 86, 0.14), transparent 30%),
+        rgba(12, 10, 10, 0.44);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: var(--shadow);
+    }
+
+    .diagram-shell svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .diagram-shell .experiment-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 18px;
+    }
+
+    .eyebrow,
+    .hero-subtitle,
+    .kicker,
+    .metric-label,
+    .metric-value,
+    .step-index,
+    .term-caption,
+    .term-word,
+    .diagram-note,
+    .timeline-year {
+      margin: 0;
+    }
+
+    .diagram-note {
+      font-size: 0.72em;
+      line-height: 1.4;
+      color: var(--muted);
+      margin-top: 10px;
+    }
+
+    .lead {
+      margin: 0;
+    }
+
+    .hero-panel p,
+    .panel p,
+    .comparison-card p,
+    .metric-card p,
+    .quote-panel p,
+    .law-strip p,
+    .timeline-card p {
+      margin: 0;
+    }
+
+    .comparison-card p+p,
+    .metric-card p+p,
+    .quote-panel p+p,
+    .law-strip p+p,
+    .timeline-card p+p {
+      margin-top: 0.55em;
+    }
+
+    .comparison-card .eq-display {
+      margin: 0 0 12px;
+    }
+
+    .deck-slide--faraday .slide-inner {
+      justify-content: flex-start;
+      gap: 16px;
+    }
+
+    .deck-slide--faraday .diagram-shell {
+      padding: 12px;
+    }
+
+    .deck-slide--faraday .experiment-image {
+      max-height: 250px;
+      width: 100%;
+      object-fit: contain;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section class="deck-slide hero" id="hero">
+        <div class="slide-inner">
+          <p class="eyebrow">Eletromagnetismo em Ciências</p>
+          <div class="hero-grid">
+            <div>
+              <h1>Eletricidade e Magnetismo</h1>
+              <p class="lead">Uma narrativa experimental sobre como uma corrente cria campo magnético, como um campo
+                magnético variável cria corrente e como cargas em movimento passam a sentir uma força magnética.</p>
+            </div>
+            <div class="hero-panel">
+              <p class="hero-subtitle">Linha mestra da descoberta</p>
+              <p class="metric-value">1820 &rarr; 1831 &rarr; 1864 &rarr; 1895</p>
+              <p>Oersted abre a porta, Faraday revela a indução, Maxwell organiza a teoria e Lorentz descreve a
+                ação dos campos sobre cargas em movimento.</p>
+              <p>Entre esses marcos, Biot-Savart, Ampère e Lenz dão precisão matemática e direção física ao
+                fenômeno.</p>
+            </div>
+          </div>
+          <div class="hero-footer">
+            <p class="kicker">Do fio à bobina, da bússola ao campo: cada experimento respondeu uma pergunta e abriu
+              outra.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="deck-slide" id="overview">
+        <div class="slide-inner">
+          <p class="eyebrow">Mapa da descoberta</p>
+          <h2>Quatro perguntas que mudaram a física</h2>
+          <div class="process-row">
+            <div class="process-step fragment fade-up">
+              <p class="step-index">1820</p>
+              <h3>Corrente &rarr; campo</h3>
+              <p>Oersted vê a bússola desviar quando o fio é percorrido por corrente.</p>
+            </div>
+            <div class="process-step fragment fade-up">
+              <p class="step-index">1820-1826</p>
+              <h3>Como calcular?</h3>
+              <p>Biot-Savart e Ampère descrevem o campo produzido por uma corrente.</p>
+            </div>
+            <div class="process-step fragment fade-up">
+              <p class="step-index">1831-1834</p>
+              <h3>Campo &rarr; corrente</h3>
+              <p>Faraday descobre a indução e Lenz fixa o sentido da resposta.</p>
+            </div>
+            <div class="process-step fragment fade-up">
+              <p class="step-index">1895</p>
+              <h3>Força sobre cargas</h3>
+              <p>Lorentz formaliza como os campos empurram partículas em movimento.</p>
+            </div>
+          </div>
+          <div class="quote-panel fragment fade-up">
+            <p class="quote-text">A história do eletromagnetismo é um diálogo entre corrente, campo, movimento e
+              simetria.</p>
+            <p>Quando uma dessas peças ficou clara, a outra passou a fazer sentido também.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="deck-slide" id="oersted">
+        <div class="slide-inner">
+          <p class="eyebrow">1820</p>
+          <h2>Oersted mostra que corrente cria campo magnético</h2>
+          <div class="grid-2">
+            <div class="panel">
+              <ul class="clean">
+                <li class="fade-up">Hans Christian Oersted colocou uma bússola perto de um fio retilíneo ligado a
+                  uma bateria.</li>
+                <li class="fragment fade-up">Quando o circuito foi fechado, a agulha da bússola se desviou
+                  imediatamente.</li>
+                <li class="fragment fade-up">Ao inverter o sentido da corrente, o desvio também se invertia.</li>
+                <li class="fragment fade-up">Conclusão: a corrente elétrica gera um campo magnético ao redor do
+                  condutor.</li>
+              </ul>
+              <div class="law-strip fragment fade-up">
+                <p>O efeito não estava na bateria em si, mas no campo criado pela corrente no fio.</p>
+              </div>
+            </div>
+            <div class="diagram-shell fragment zoom-in">
+              <img class="experiment-image" src="oersted-experiment.webp" alt="Experimento de Oersted" loading="eager"
+                decoding="async">
+              <p class="diagram-note">A bússola responde ao campo circular ao redor do fio. O sentido do desvio
+                muda quando a corrente muda de direção.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="deck-slide" id="biot-savart-ampere">
+        <div class="slide-inner">
+          <p class="eyebrow">1820-1826</p>
+          <h2>Duas leis para descrever o campo criado por uma corrente</h2>
+          <div class="grid-2">
+            <div class="comparison-card vitrea fragment fade-up">
+              <p class="term-caption">Biot-Savart</p>
+              <p class="eq-display">\( d\vec B = \frac{\mu_0}{4\pi}\,\frac{I\,d\vec\ell \times \hat r}{r^2} \)</p>
+              <p>É a forma geral: cada pequeno trecho de corrente contribui para o campo total em um ponto do espaço.
+              </p>
+              <p>Por isso ela é poderosa em geometrias arbitrárias, mesmo quando a conta fica mais longa.</p>
+            </div>
+            <div class="comparison-card resinosa fragment fade-up">
+              <p class="term-caption">Ampère</p>
+              <p class="eq-display">\( \oint \vec B \cdot d\vec \ell = \mu_0 I_{\mathrm{enc}} \)</p>
+              <p>Quando há simetria, a circulação do campo simplifica o problema e revela o padrão com elegância.</p>
+              <p>Fio retilíneo, solenóide e toroide viram exemplos clássicos dessa ideia.</p>
+            </div>
+          </div>
+          <div class="law-strip fragment zoom-in">
+            <p>\[ B = \frac{\mu_0 I}{2\pi r} \]</p>
+          </div>
+          <div class="quote-panel fragment fade-up">
+            <p class="quote-text">Biot-Savart diz como somar o campo. Ampère diz como aproveitá-lo com simetria.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="deck-slide deck-slide--faraday" id="faraday">
+        <div class="slide-inner">
+          <p class="eyebrow">1831</p>
+          <h2>Indução eletromagnética</h2>
+          <p class="lead">Michael Faraday moveu um ímã para dentro e para fora de uma bobina conectada a um
+            galvanômetro. A corrente só aparecia enquanto havia movimento relativo.</p>
+          <div class="grid-2">
+            <div class="panel">
+              <ul class="clean">
+                <li class="fade-up">A bobina não produziu corrente quando o ímã ficou parado.</li>
+                <li class="fragment fade-up">A agulha do galvanômetro se mexeu apenas durante a entrada e a saída do
+                  ímã.</li>
+                <li class="fragment fade-up">Quanto mais rápido o movimento, maior a deflexão observada.</li>
+                <li class="fragment fade-up">Conclusão: um campo magnético variável gera corrente elétrica.</li>
+              </ul>
+            </div>
+            <div class="diagram-shell fragment zoom-in">
+              <img class="experiment-image" src="inducao-bobinas.webp" alt="Experimento de indução com bobinas"
+                loading="eager" decoding="async">
+              <p class="diagram-note">O ímã só gera corrente enquanto o fluxo magnético muda. Sem movimento, o
+                galvanômetro volta ao zero.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="deck-slide" id="faraday-lenz">
+        <div class="slide-inner">
+          <p class="eyebrow">Lei de Faraday e Lei de Lenz</p>
+          <h2>A corrente induzida nasce da variação do fluxo</h2>
+          <div class="grid-3">
+            <div class="comparison-card vitrea fragment fade-up">
+              <p class="term-caption">Fluxo magnético</p>
+              <p class="eq-display">\( \Phi_B = \int \vec B \cdot d\vec A \)</p>
+              <p>Ele mede quantas linhas de campo atravessam uma área orientada.</p>
+              <p>Se o campo, a área ou o ângulo mudam, o fluxo também muda.</p>
+            </div>
+            <div class="comparison-card resinosa fragment fade-up">
+              <p class="term-caption">Lei de Faraday</p>
+              <p class="eq-display">\( \mathcal{E} = -\frac{d\Phi_B}{dt} \)</p>
+              <p>A força eletromotriz induzida é proporcional à rapidez com que o fluxo varia.</p>
+              <p>É a equação que transforma a observação de Faraday em linguagem matemática.</p>
+            </div>
+            <div class="comparison-card vitrea fragment fade-up">
+              <p class="term-caption">Lei de Lenz</p>
+              <p>O sinal negativo diz que a corrente induzida reage contra a variação que a produziu.</p>
+              <p>Se o fluxo aumenta, a bobina tenta reduzi-lo. Se o fluxo diminui, a bobina tenta mantê-lo.</p>
+              <p>Esse detalhe garante a conservação de energia no processo.</p>
+            </div>
+          </div>
+          <div class="law-strip fragment zoom-in">
+            <p>O sinal negativo não é decoração algébrica. Ele indica a direção da resposta da bobina.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="deck-slide" id="lorentz">
+        <div class="slide-inner">
+          <p class="eyebrow">Força magnética</p>
+          <h2>Lorentz: o campo age sobre cargas em movimento</h2>
+          <div class="grid-2">
+            <div class="panel">
+              <ul class="clean">
+                <li class="fade-up">Uma carga elétrica em movimento sente uma força magnética quando está em um
+                  campo magnético.</li>
+                <li class="fragment fade-up">A força é perpendicular a <strong>\(\vec v\)</strong> e a
+                  <strong>\(\vec B\)</strong>, por isso ela muda a direção da trajetória.
+                </li>
+                <li class="fragment fade-up">Em um fio percorrido por corrente, o mesmo princípio aparece como força
+                  sobre o condutor.</li>
+                <li class="fragment fade-up">É a base de motores elétricos, alto-falantes e aceleradores de
+                  partículas.</li>
+              </ul>
+              <div class="quote-panel fragment fade-up">
+                <p class="quote-text">A força magnética curva a trajetória, mas não acelera a carga na direção do
+                  movimento.</p>
+              </div>
+            </div>
+            <div class="metric-card fragment zoom-in">
+              <p class="metric-label">Forma geral</p>
+              <p class="metric-value">Desvio</p>
+              <p>\( \vec F = q(\vec E + \vec v \times \vec B) \)</p>
+              <p>\( \vec F_B = q\,\vec v \times \vec B \)</p>
+              <p>Quando o foco é apenas o efeito magnético, o produto vetorial deixa claro por que a força é
+                sempre lateral ao movimento.</p>
+              <div class="law-strip">
+                <p>\( \vec F = I\,\vec L \times \vec B \)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="deck-slide" id="timeline">
+        <div class="slide-inner">
+          <p class="eyebrow">Linha do tempo</p>
+          <h2>Da bússola à teoria de campos</h2>
+          <div class="timeline-shell">
+            <div class="timeline-row fragment fade-up">
+              <p class="timeline-year">1820</p>
+              <div class="timeline-axis" aria-hidden="true">
+                <span class="timeline-dot"></span>
+              </div>
+              <div class="timeline-card">
+                <h3>Oersted</h3>
+                <p>Corrente em um fio desvia a agulha de uma bússola e revela o vínculo entre eletricidade e
+                  magnetismo.</p>
+              </div>
+            </div>
+
+            <div class="timeline-row fragment fade-up">
+              <p class="timeline-year">1820-1826</p>
+              <div class="timeline-axis" aria-hidden="true">
+                <span class="timeline-dot"></span>
+              </div>
+              <div class="timeline-card">
+                <h3>Biot-Savart e Ampère</h3>
+                <p>O campo criado por correntes passa a ser descrito e calculado com precisão matemática.</p>
+              </div>
+            </div>
+
+            <div class="timeline-row fragment fade-up">
+              <p class="timeline-year">1831</p>
+              <div class="timeline-axis" aria-hidden="true">
+                <span class="timeline-dot"></span>
+              </div>
+              <div class="timeline-card">
+                <h3>Faraday</h3>
+                <p>Ao mover um ímã perto de uma bobina, descobre que a variação do campo induz corrente elétrica.</p>
+              </div>
+            </div>
+
+            <div class="timeline-row fragment fade-up">
+              <p class="timeline-year">1834</p>
+              <div class="timeline-axis" aria-hidden="true">
+                <span class="timeline-dot"></span>
+              </div>
+              <div class="timeline-card">
+                <h3>Lenz</h3>
+                <p>O sentido da corrente induzida passa a ser entendido como oposição à variação que a produziu.</p>
+              </div>
+            </div>
+
+            <div class="timeline-row fragment fade-up">
+              <p class="timeline-year">1864</p>
+              <div class="timeline-axis" aria-hidden="true">
+                <span class="timeline-dot"></span>
+              </div>
+              <div class="timeline-card">
+                <h3>Maxwell</h3>
+                <p>As leis ganham forma unificada e passam a descrever eletricidade, magnetismo e luz como um
+                  único campo.</p>
+              </div>
+            </div>
+
+            <div class="timeline-row fragment fade-up">
+              <p class="timeline-year">1895</p>
+              <div class="timeline-axis" aria-hidden="true">
+                <span class="timeline-dot"></span>
+              </div>
+              <div class="timeline-card">
+                <h3>Lorentz</h3>
+                <p>A força sobre cargas em movimento é formulada de modo geral e conecta teoria e aplicações
+                  tecnológicas.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="deck-slide" id="synthesis">
+        <div class="slide-inner">
+          <p class="eyebrow">Síntese</p>
+          <h2>Uma ideia única por trás de todos os efeitos</h2>
+          <div class="process-row">
+            <div class="process-step fragment fade-up">
+              <p class="step-index">Corrente</p>
+              <h3>Gera campo</h3>
+              <p>Oersted mostra o primeiro elo e Ampère organiza sua descrição matemática.</p>
+            </div>
+            <div class="process-step fragment fade-up">
+              <p class="step-index">Campo</p>
+              <h3>Pode ser calculado</h3>
+              <p>Biot-Savart e Ampère explicam a forma do campo em torno das correntes.</p>
+            </div>
+            <div class="process-step fragment fade-up">
+              <p class="step-index">Variação</p>
+              <h3>Induz corrente</h3>
+              <p>Faraday e Lenz mostram que mudar o fluxo magnético produz corrente elétrica.</p>
+            </div>
+            <div class="process-step fragment fade-up">
+              <p class="step-index">Força</p>
+              <h3>Age sobre cargas</h3>
+              <p>Lorentz fecha o ciclo ao descrever a ação do campo sobre partículas em movimento.</p>
+            </div>
+          </div>
+          <div class="quote-panel fragment fade-up">
+            <p class="quote-text">No eletromagnetismo, corrente, campo e força deixam de ser capítulos separados e
+              passam a fazer parte da mesma história.</p>
+            <p>Maxwell dá a unificação teórica; os experimentos de Oersted e Faraday dão a prova física.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/math/math.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      controls: true,
+      progress: true,
+      center: true,
+      transition: "slide",
+      backgroundTransition: "fade",
+      width: 1280,
+      height: 720,
+      margin: 0.04,
+      navigationMode: "linear",
+      viewDistance: 4,
+      plugins: [RevealMath.KaTeX],
+      katex: {
+        version: "latest",
+        delimiters: [
+          { left: "$$", right: "$$", display: true },
+          { left: "$", right: "$", display: false },
+          { left: "\\(", right: "\\)", display: false },
+          { left: "\\[", right: "\\]", display: true },
+        ],
+        ignoredTags: ["script", "noscript", "style", "textarea", "pre", "code"],
+      },
+    });
+  </script>
+</body>
+
+</html>
