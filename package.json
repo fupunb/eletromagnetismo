@@ -1,0 +1,7 @@
+{
+  "name": "eletromagnetismo",
+  "private": true,
+  "scripts": {
+    "generate:index": "node scripts/generate-index.mjs"
+  }
+}
